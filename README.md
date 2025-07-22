@@ -46,3 +46,27 @@ This is a simple web-based Tic Tac Toe game built using **Django**, where two pl
    cd your-repo
 
 
+## 🎯 Screenshots
+### Login page
+![Game Start](screenshots/login_page.png)
+
+### Register Page
+![Game Start](screenshots/register_page.png)
+
+
+### Home Page
+![Game Start](screenshots/home page.png)
+
+
+### 🟢 Game Start
+
+![Game Start](screenshots/game_Start_page.png)
+
+### 🏁 Game End
+
+![Game End](screenshots/game_mode.png)
+
+### LogOut page
+![Game Start](screenshots/after_logout.png)
+
+
