@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: tic-tac-toy
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn tic_tac_toy.wsgi
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: tic_tac_toy.settings
+      - key: PYTHON_VERSION
+        value: 3.11
