@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Tic Tac Toe{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'game/css/style.css' %}">
+  <style>
+    /* body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fafafa;
+    } */
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: linear-gradient(90deg, #4facfe, #00f2fe);
+      color: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .nav-left h1 {
+      margin: 0;
+      font-size: 28px;
+      letter-spacing: 1px;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-right a,
+    .nav-right button {
+      text-decoration: none;
+      color: white;
+      background: transparent;
+      border: 2px solid transparent;
+      font-size: 16px;
+      padding: 8px 14px;
+      border-radius: 5px;
+      transition: 0.3s ease;
+    }
+
+    .nav-right a:hover,
+    .nav-right button:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      border-color: white;
+      font-size: 1.2rem; 
+      font-weight: 500;
+    }
+
+    .nav-right span {
+      font-weight: 500;
+    }
+
+    form {
+      margin: 0;
+    }
+
+    hr {
+      margin: 0;
+      border: none;
+      border-top: 1px solid #ddd;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+      }
+
+      .nav-right {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-left">
+      <h1>Tic-Tac-Toe</h1>
+    </div>
+    <div class="nav-right">
+      {% if user.is_authenticated %}
+        <span>Hello, {{ user.username }}</span>
+        <form method="POST" action="{% url 'users:logout' %}">
+          {% csrf_token %}
+          <button type="submit">Logout</button>
+        </form>
+      {% else %}
+        <a href="{% url 'users:login' %}"><b>Login</b></a>
+        <a href="{% url 'users:register' %}"><b>Register</b></a>
+      {% endif %}
+    </div>
+  </nav>
+  <hr>
+  {% block content %}
+  {% endblock %}
+</body>
+</html>

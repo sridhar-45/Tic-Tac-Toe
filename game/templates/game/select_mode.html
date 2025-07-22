@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title %}Choose Game Mode{% endblock %}
+
+{% block content %}
+<style>
+  .choose-mode-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    font-family: Arial, sans-serif;
+  }
+
+  .choose-mode-container h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+  }
+
+  .game-mode-buttons {
+    display: flex;
+    gap: 30px;
+  }
+
+  .game-mode-buttons a {
+    padding: 15px 25px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .game-mode-buttons a:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+</style>
+
+<div class="choose-mode-container">
+  <h2 style="
+  text-align: center;
+  font-size: 2.5rem;
+  color: black;
+  font-weight: 700;
+  margin-top: 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);">
+  Choose Your Path to Victory
+</h2>
+
+  <div class="game-mode-buttons">
+    <a href="{% url 'game:manual_mode' %}" id="manual-btn">🎮 Manual (2 Players)</a>
+    <a href="{% url 'game:computer_mode' %}" id="computer-btn">🤖 Play with Computer</a>
+  </div>
+</div>
+{% endblock %}
