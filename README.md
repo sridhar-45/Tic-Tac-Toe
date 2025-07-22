@@ -55,7 +55,7 @@ This is a simple web-based Tic Tac Toe game built using **Django**, where two pl
 
 
 ### Home Page
-![Game Start](screenshots/home page.png)
+![Game Start](screenshots/home_page.png)
 
 
 ### 🟢 Game Start
