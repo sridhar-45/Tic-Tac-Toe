@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate
 from .forms import RegistrationForm
+from django.contrib import messages
+from django.http import HttpResponse
 
 # Create your views here.
 def register(request):
@@ -10,7 +12,10 @@ def register(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
+            messages.success(request, "Account Created successfully!")
             return redirect("game:select_mode")
+        # else:
+        #     return HttpResponse(f" Form erros: {form.errors}")
     else:
         form = RegistrationForm()
     
