@@ -1,4 +1,4 @@
-[### 🎮 Tic Tac Toe Web Application](https://sridhar-tic-tac-toe-web-application.onrender.com/)
+## 🎮 Tic Tac Toe Web Application
 
 This is a simple web-based Tic Tac Toe game built using **Django**, where two players can play the classic game in a web browser.
 
@@ -74,11 +74,6 @@ A simple and interactive Tic Tac Toe game built with [Your Tech Stack, e.g., HTM
 ![Game Start](screenshots/after_logout.png)
 
 
-
-### # 🎮 Tic Tac Toe Game
-
-A simple and interactive Tic Tac Toe game built with [Your Tech Stack, e.g., HTML/CSS/JavaScript or React].  
-🟢 **Live Demo:** [Click here to play](https://sridhar-tic-tac-toe-web-application.onrender.com/)
 
 
 
